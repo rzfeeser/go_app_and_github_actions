@@ -11,7 +11,7 @@ on:
 
 jobs:
     
-  mybuild:
+  myCI:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4  # copy all of the GitRepo code into the container space
@@ -24,5 +24,9 @@ jobs:
     - name: BUILD! Create a Go App 
       run: go build -v ./...
 
+    - name: RUN! Go App
+      run: ./main
+
     # - name: Test our Go App
     #  run: go test -v ./...
+  
