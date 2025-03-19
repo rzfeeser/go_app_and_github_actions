@@ -28,7 +28,7 @@ jobs:
       run: ls
 
     - name: RUN! Go App
-      run: ./main
+      run: ./my_simple_go_app
 
     # - name: Test our Go App
     #  run: go test -v ./...
