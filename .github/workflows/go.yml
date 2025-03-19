@@ -31,6 +31,8 @@ jobs:
 
     - name: RUN! Go App
       run: ./my_simple_go_app
+      env:
+        MYTESTENV: ${{ secrets.MYTESTENV }}    # secrets.MYTESTENV is the name of the secret in the vault
 
     # - name: Test our Go App
     #  run: go test -v ./...
