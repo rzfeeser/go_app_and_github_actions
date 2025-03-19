@@ -1,0 +1,28 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Go
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+    
+  mybuild:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4  # copy all of the GitRepo code into the container space
+
+    - name: Set up Go
+      uses: actions/setup-go@v4  # install go in the container space
+      with:
+        go-version: '1.24.1'     # this is an argument passed to setup-go@v4
+
+    - name: BUILD! Create a Go App 
+      run: go build -v ./...
+
+    # - name: Test our Go App
+    #  run: go test -v ./...
