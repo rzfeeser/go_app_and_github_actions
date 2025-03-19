@@ -25,6 +25,9 @@ jobs:
       run: go build -v ./...
 
     - name: RUN! Go App
+      run: ls
+
+    - name: RUN! Go App
       run: ./main
 
     # - name: Test our Go App
