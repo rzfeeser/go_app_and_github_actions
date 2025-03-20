@@ -8,7 +8,6 @@ package main
 
 import (
     "testing"   // used for testing
-    "regexp"    // regular expression library
 )
 
 func Test_site_responder(t *testing.T) {
