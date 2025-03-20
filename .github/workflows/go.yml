@@ -26,14 +26,14 @@ jobs:
     - name: BUILD! Create a Go App 
       run: go build -v ./...
 
-    - name: RUN! Go App
+    - name: Show the contents of the current directory (where Go App is being built)
       run: ls
+      
+    - name: Test our Go App
+      run: go test -v ./...
 
     - name: RUN! Go App
       run: ./my_simple_go_app
       env:
         MYTESTENV: ${{ secrets.MYTESTENV }}    # secrets.MYTESTENV is the name of the secret in the vault
-
-    # - name: Test our Go App
-    #  run: go test -v ./...
   
